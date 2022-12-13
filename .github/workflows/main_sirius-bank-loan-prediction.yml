@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'Sirius-bank-loan-prediction'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_073CAF86F5254EF085DC3B672EA73557 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_81C89D7DC23844DDBBD57D8813F545E9 }}
