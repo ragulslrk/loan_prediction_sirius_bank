@@ -11,7 +11,7 @@ model = pickle.load(open('loanPrediction.pkl', 'rb'))
 
 @app.route('/')
 def home():
-    return ' this is  home page '
+    return ' this is a  home page '
 
 
 @app.route('/predict/<age>/<experience>/<martial_status>/<house>/<car>',methods=['GET'])
