@@ -14,14 +14,23 @@ def home():
     return ' this is  home page '
 
 
-@app.route('/predict',methods=['POST'])
-def predict():
-    age=int(request.form['age'])
-    experience=int(request.form['experience'])
-    martial_status=int(request.form['martial_status'])
-    house=int(request.form['house'])
-    car=int(request.form['car'])
+@app.route('/predict/<age>/<experience>/<martial_status>/<house>/<car>',methods=['GET'])
+# def predict():
+#     age=int(request.form['age'])
+#     experience=int(request.form['experience'])
+#     martial_status=int(request.form['martial_status'])
+#     house=int(request.form['house'])
+#     car=int(request.form['car'])
+#     values=model.predict(np.array([[age,experience,martial_status,house,car]]))
+#     return str(values[0])
+def predict(age,experience,martial_status,house,car):
+    age=int(age)
+    experience=int(experience)
+    martial_status=int(martial_status)
+    house=int(house)
+    car=int(car)
     values=model.predict(np.array([[age,experience,martial_status,house,car]]))
     return str(values[0])
+
 if __name__ =='__main__':  
     app.run()  
